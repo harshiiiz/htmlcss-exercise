@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+ 
+@import 'variables.scss';
+
+*{
+    margin:0;
+    padding: 0%;
+    box-sizing: border-box;
+     background-color: $whitebg;
+	 font-family: 'Rubik',sans-serif;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin:0 40px;
+    margin-top: 120px;
+}
+.box{
+    height: 180px;
+    width: 180px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    background-color: #FFFFFF ;
+    border-radius: $borderrad;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.05);
+}
+.parts{
+    margin: 0 8px 0 8px;
+    height: 40px;
+    border-radius: $borderrad;
+	
+}
+.part1{
+     font-weight: 600;
+     background-color: #f17d7d;
+     font-style: normal;
+     font-size: 20px;
+     color: white;
+     @include flexcenter;
+     margin-top: 20px;
+     margin-bottom: 10px;
+}
+.part2{
+    padding: 8px 12px;
+    font-weight: 200;
+    background-color: rgba(255, 230, 0, 0.97);
+    font-style: normal;
+    font-size: 10px;
+    
+    
+    
+}
+.part3{
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-size: 10px;
+	line-height: 12px;
+    @include flexcenter;
+    background-color: #46eec6;
+
+}
+.box10{
+    flex-grow: 1;
+}
+.box10 .part2{
+    display: flex;
+    align-items: center;
+}
+div{
+    display: block;
+}
+
+.box:nth-child(odd) .part2{
+     padding: 14px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.part1::before {
+	content: '';
+	border:$border;
+	width: 40px;
+	position: absolute;
+	top: 89px;
+	right: -40px;
+	border-left: none;
+	border-bottom: none;
+	border-right: none;
+}
+.part1::after{
+    content: '';
+    width: 20px;
+    height: 120px;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+}
+.part3::before{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -40px;
+}
+.circle::after{
+    content: '';
+    background: linear-gradient(180deg, rgba(248, 178, 62, 0.984844) 0%, rgba(255, 230, 0, 0.97) 100%);
+    position: absolute;
+    top: 80px;
+    right: -60px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+}
+@media only screen and (min-width: 1840px) and (max-width: 2060px) {
+.box8 .part1::before {
+    @include rightline;
+}
+.box9 .part1::after {
+    @include leftline;
+}
+.box8 .part3::before {
+     @include centerline;
+    width: 1780px;
+}
+
+}
+
+@media only screen and (min-width: 1620px) and (max-width: 1839px) {
+    .box7 .part1::before {
+        @include rightline;
+    }
+    .box8 .part1::after {
+        @include leftline;
+    }
+    .box7 .part3::before {
+        @include centerline;
+        width:1560px;
+    }
+
+}
+@media only screen and (min-width: 1400px) and (max-width: 1619px) {
+    .box6 .part1::before {
+        @include rightline;
+    }
+    .box7 .part1::after {
+        @include leftline;
+    }
+    .box6 .part3::before {
+        @include centerline;
+        width: 1340px;
+    }
+}
+
+@media only screen and (min-width:1180px) and (max-width:1399px){
+   .box5 .part1::before{
+       @include rightline;
+   }
+   .box6 .part1::after {
+      @include leftline;
+    }
+    .box5 .part3::before {
+       @include centerline;
+      width: 1120px;
+}
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1179px) {
+    .box4 .part1::before {
+        @include rightline;
+    }
+    .box5 .part1::after {
+		@include leftline;
+	}
+
+	.box4 .part3::before {
+		@include centerline;
+		width: 900px;
+	}
+    .box8 .part1::before {
+		@include rightline;
+	}
+    .box9 .part1::after {
+		@include leftline;
+	}
+
+	.box8 .part3::before {
+		@include centerline;
+		width: 900px;
+	}
+}
+@media only screen and (min-width: 755px) and (max-width: 959px) {
+    .box3 .part1::before {
+		@include rightline;
+	}
+    .box4 .part1::after {
+        @include leftline;
+	}
+
+	.box3 .part3::before {
+		@include centerline;
+		width: 680px;
+	}
+    .box6 .part1::before {
+		@include rightline;
+	}
+    .box7 .part1::after {
+		@include leftline;
+	}
+
+	.box6 .part3::before {
+		@include centerline;
+		width: 680px;
+	}
+    .box9 .part1::before {
+		@include rightline;
+	}
+    .box10 .part1::after {
+		@include leftline;
+	}
+
+	.box9 .part3::before {
+		@include centerline;
+		width: 680px;
+	}
+}
+@media only screen and (min-width: 520px) and (max-width: 754px) {
+    .box2 .part1::before {
+		@include rightline;
+	}
+    .box3 .part1::after {
+		@include leftline;
+	}
+
+	.box2 .part3::before {
+		@include centerline;
+		width: 460px;
+	}
+    .box4 .part1::before {
+		@include rightline;
+	}
+    .box5 .part1::after {
+		@include leftline;
+	}
+
+	.box4 .part3::before {
+		@include centerline;
+		width: 460px;
+	}
+    .box6 .part1::before {
+		@include rightline;
+	}
+    .box7 .part1::after {
+		@include leftline;
+	}
+
+	.box6 .part3::before {
+		@include centerline;
+		width: 460px;
+	}
+    .box8 .part1::before {
+		@include rightline;
+	}
+    .box9 .part1::after {
+		@include  leftline;
+	}
+
+	.box8 .part3::before {
+		@include centerline;
+		width: 460px;
+	}
+}
+@media only screen and (max-width: 534px) {
+    .box1 .part1::before {
+		@include rightline;
+	}
+    .box2 .part1::after {
+		@include leftline;
+	}
+
+	.box1 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box2 .part1::before {
+		@include rightline;
+	}
+    .box3 .part1::after {
+		@include leftline;
+	}
+
+	.box2 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box3 .part1::before {
+		@include rightline;
+    }
+    .box4 .part1::after {
+		@include leftline;
+	}
+
+	.box3 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box4 .part1::before {
+		@include rightline;
+	}
+    .box5 .part1::after {
+		@include leftline;
+	}
+
+	.box4 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box5 .part1::before {
+		@include rightline;
+	}
+    .box6 .part1::after {
+		@include leftline;
+	}
+
+	.box5 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box6 .part1::before {
+		@include rightline;
+	}
+    .box7 .part1::after {
+		@include leftline;
+	}
+
+	.box6 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box7 .part1::before {
+		@include rightline;
+	}
+    .box8 .part1::after {
+		@include leftline;
+    }
+
+	.box7 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box8 .part1::before {
+		@include rightline;
+	}
+    .box9 .part1::after {
+		@include leftline;
+	}
+
+	.box8 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+	.box9 .part1::before {
+		@include rightline;
+	}
+    .box10 .part1::after {
+		@include leftline;
+	}
+
+	.box9 .part3::before {
+		@include centerline;
+		width: 240px;
+	}
+}

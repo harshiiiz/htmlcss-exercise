@@ -1,0 +1,29 @@
+$whitebg:#f0f0f0;
+$borderrad:8px;
+$border: 1px solid #8E8C8C;
+
+@mixin flexcenter{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+
+@mixin  rightline {
+    border: $border;
+    height: 120px;
+    border-left: none;
+    border-bottom: none;
+    
+}
+@mixin leftline{
+    border: $border;
+    border-right: none;
+    border-top: none;
+}
+
+@mixin centerline {
+    @include leftline;
+    border-left: none;
+    
+}
